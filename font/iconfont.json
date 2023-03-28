@@ -1,0 +1,23 @@
+{
+  "id": "3979340",
+  "name": "天勤",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1506397",
+      "name": "通知",
+      "font_class": "tongzhi",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "1727422",
+      "name": "205设置",
+      "font_class": "shezhi",
+      "unicode": "e8b8",
+      "unicode_decimal": 59576
+    }
+  ]
+}

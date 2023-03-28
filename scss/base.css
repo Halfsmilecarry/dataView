@@ -1,0 +1,51 @@
+*{
+  /* 设置怪异盒子模型 可以让border和padding包含在width和height中  内减模式 */
+  box-sizing: border-box;
+  user-select: none;
+}
+
+::after,::before{
+  box-sizing: border-box;
+}
+
+/* 去掉图片底部默认缝隙 */
+img{
+  vertical-align: bottom;
+}
+
+/* 超链接的美化 */
+a{
+  text-decoration: none;
+  color:#c9c9dd;
+}
+a:hover{
+  color:#ecce83;
+}
+
+/* 版心类 */
+.container{
+  width: 1228px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* 浮动类 */
+.fl{
+  float: left;
+}
+
+.fr{
+  float: right;
+}
+
+/* 清除浮动类 */
+.clearfix::after{
+  content:"";
+  display: block;
+  clear:both;
+}
+
+body{
+  /* 设置网页的最小宽度 */
+  min-width: 1260px;
+}

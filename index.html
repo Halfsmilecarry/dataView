@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>天勤数据视图</title>
+    <link rel="stylesheet" href="./scss/reset.css" />
+    <link rel="stylesheet" href="./scss/base.css" />
+    <link rel="stylesheet" href="./scss/dataView.css" />
+    <link rel="stylesheet" href="./font/iconfont.css" />
+    <!-- 引入工具函数 -->
+    <script src="./JS/tool.js"></script>
+    <script src="./JS/home.js"></script>
+    <!-- 引入 echarts-->
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <!-- 引入axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="box">
+      <div class="navBox">
+        <div class="logo-left">
+          <div class="logo">LOGO</div>
+        </div>
+        <div class="logo-right">
+          <div class="setting iconfont icon-shezhi"></div>
+          <div class="message iconfont icon-tongzhi"></div>
+          <div class="logo-out">Logo Out</div>
+        </div>
+      </div>
+      <div class="content-box">
+        <div class="content-nav">
+          <div class="content-nav-left">
+            <div class="font-box">
+              <div class="lager-viewsfonts">Audience Overview</div>
+              <div class="small-viewsfonts">Roseville CA</div>
+            </div>
+            <!-- 轮播图开始 -->
+            <div class="animate-banner-box">
+              <!-- 轮播图盒子 -->
+              <div class="banner">
+                <!-- 轮播图图片 -->
+                <div class="bannerImg">
+                  <ul>
+                    <li>
+                      <a href="javascript:;"
+                        ><img class="auto-img" src="./images/轮播图片六.png"
+                      /></a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"
+                        ><img class="auto-img" src="./images/轮播图图片一.png"
+                      /></a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"
+                        ><img class="auto-img" src="./images/轮播图图片二.png"
+                      /></a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"
+                        ><img class="auto-img" src="./images/轮播图片三.png"
+                      /></a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"
+                        ><img class="auto-img" src="./images/轮播图片四.png"
+                      /></a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"
+                        ><img class="auto-img" src="./images/轮播图片五.png"
+                      /></a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"
+                        ><img class="auto-img" src="./images/轮播图片六.png"
+                      /></a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"
+                        ><img class="auto-img" src="./images/轮播图图片一.png"
+                      /></a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- 轮播图控制箭头 -->
+                <!-- 左箭头 -->
+                <span class="arrow-left">&lt;</span>
+                <!-- 右箭头 -->
+                <span class="arrow-right">&gt;</span>
+
+                <!-- 轮播图控制小圆点 -->
+                <div class="dot">
+                  <ol>
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 左侧轮播图结束 -->
+          <div class="content-nav-right">
+            <!-- 右侧选项卡开始 -->
+            <div class="tab-box">
+              <div class="tab-list">
+                <div class="tab-list-item active">DASHBOARD</div>
+                <div class="tab-list-item">PROJECTS</div>
+                <div class="tab-list-item">CALENDAR</div>
+                <div class="tab-list-item">MAILBOX</div>
+                <div class="tab-list-item">SETTINGS</div>
+              </div>
+
+              <!-- tabar展示的内容 -->
+              <div class="tab-list-item-content active">
+                <div class="tab-list-item-content-nav">
+                  <div class="left-text">Support Requests</div>
+                  <div class="right-text">view All</div>
+                </div>
+                <div class="data-content">
+                  <div class="data-content-nav">
+                    <div class="data-content-title">TIME</div>
+                    <div class="data-content-title">USER NAME</div>
+                    <div class="data-content-title">STATUS</div>
+                  </div>
+                  <div class="table-conent">
+                    <div class="content-list">
+                      <div>9:45pm</div>
+                      <div>info@design.com</div>
+                      <div class="list-button">Solved</div>
+                    </div>
+                    <div class="content-list">
+                      <div>9:45pm</div>
+                      <div>info@design.com</div>
+                      <div class="list-button">Solved</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-list-item-content">
+                <div class="tab-list-item-content-nav">
+                  <div class="left-text">Support Requests</div>
+                  <div class="right-text">view All</div>
+                </div>
+                <div class="data-content">
+                  <div class="data-content-nav">
+                    <div class="data-content-title">TIME2</div>
+                    <div class="data-content-title">USER NAME</div>
+                    <div class="data-content-title">STATUS</div>
+                  </div>
+                  <div class="table-conent">
+                    <div class="content-list">
+                      <div>9:45pm</div>
+                      <div>info@design.com</div>
+                      <div class="list-button">Solved</div>
+                    </div>
+                    <div class="content-list">
+                      <div>9:45pm</div>
+                      <div>info@design.com</div>
+                      <div class="list-button">Solved</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-list-item-content">
+                <div class="tab-list-item-content-nav">
+                  <div class="left-text">Support Requests</div>
+                  <div class="right-text">view All</div>
+                </div>
+                <div class="data-content">
+                  <div class="data-content-nav">
+                    <div class="data-content-title">TIME3</div>
+                    <div class="data-content-title">USER NAME</div>
+                    <div class="data-content-title">STATUS</div>
+                  </div>
+                  <div class="table-conent">
+                    <div class="content-list">
+                      <div>9:45pm</div>
+                      <div>info@design.com</div>
+                      <div class="list-button">Solved</div>
+                    </div>
+                    <div class="content-list">
+                      <div>9:45pm</div>
+                      <div>info@design.com</div>
+                      <div class="list-button">Solved</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-list-item-content">
+                <div class="tab-list-item-content-nav">
+                  <div class="left-text">Support Requests</div>
+                  <div class="right-text">view All</div>
+                </div>
+                <div class="data-content">
+                  <div class="data-content-nav">
+                    <div class="data-content-title">TIME4</div>
+                    <div class="data-content-title">USER NAME</div>
+                    <div class="data-content-title">STATUS</div>
+                  </div>
+                  <div class="table-conent">
+                    <div class="content-list">
+                      <div>9:45pm</div>
+                      <div>info@design.com</div>
+                      <div class="list-button">Solved</div>
+                    </div>
+                    <div class="content-list">
+                      <div>9:45pm</div>
+                      <div>info@design.com</div>
+                      <div class="list-button">Solved</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-list-item-content">
+                <div class="tab-list-item-content-nav">
+                  <div class="left-text">Support Requests</div>
+                  <div class="right-text">view All</div>
+                </div>
+                <div class="data-content">
+                  <div class="data-content-nav">
+                    <div class="data-content-title">TIME5</div>
+                    <div class="data-content-title">USER NAME</div>
+                    <div class="data-content-title">STATUS</div>
+                  </div>
+                  <div class="table-conent">
+                    <div class="content-list">
+                      <div>9:45pm</div>
+                      <div>info@design.com</div>
+                      <div class="list-button">Solved</div>
+                    </div>
+                    <div class="content-list">
+                      <div>9:45pm</div>
+                      <div>info@design.com</div>
+                      <div class="list-button">Solved</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-box">
+          <div class="curve-table">
+            <div id="chart"></div>
+
+            <div class="tables">
+              <div id="pie"></div>
+              <div id="histogram"></div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="footer"> 
+        <div class="footlogo">LOGO</div>    
+        <div>
+            <div class="text">NEWS</div>
+            <div class="text">CHANNELS</div>
+            <div class="text">OVERVIEW</div>
+            <div class="text">TIMELINE</div>
+        </div>    
+        <div>
+            <div class="text">SPORT</div>
+            <div class="text CULTURE">CULTURE</div>
+            <div class="text">NATURE</div>
+            <div class="text">MUSIC</div>
+        </div>    
+        <div>
+            <div class="text">WEATHER</div>
+            <div class="text">AUTOS</div>
+            <div class="text">LOCAL</div>
+            <div class="text">SHOP</div>
+        </div>    
+        <div>
+            <div class="text">FUTURE</div>
+            <div class="text">FOOD</div>
+            <div class="text">EARTH</div>
+            <div class="text">TV</div>
+        </div>    
+        <div>
+            <div class="text">TRAVEL</div>
+            <div class="text">RADIO</div>
+        </div>    
+    </div>
+    </div>
+  </body>
+</html>
